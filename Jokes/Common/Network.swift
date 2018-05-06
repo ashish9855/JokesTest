@@ -13,3 +13,6 @@ protocol NetworkProtocols: class {
     func onError(_ error: APIError)
 }
 
+enum HTTPMethod {
+    case GET,POST,PUT
+}
