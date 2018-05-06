@@ -86,6 +86,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="firstNameField" destination="X0e-hc-wCA" id="uSo-GS-nMh"/>
+                        <outlet property="lastNameField" destination="eLV-cJ-ubT" id="QjM-u9-HBB"/>
+                        <outlet property="tableView" destination="q1h-4V-qt0" id="pam-s4-yL1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

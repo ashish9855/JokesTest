@@ -10,6 +10,10 @@ import UIKit
 
 class JokesListViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var lastNameField: UITextField!
+    @IBOutlet weak var firstNameField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
