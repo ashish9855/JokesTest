@@ -16,3 +16,12 @@ protocol NetworkProtocols: class {
 enum HTTPMethod {
     case GET,POST,PUT
 }
+
+class Network {
+    
+    weak var delegate:NetworkProtocols?
+    
+    init(_ delegate: NetworkProtocols?) {
+        self.delegate = delegate
+    }
+}
