@@ -20,6 +20,7 @@
 		5F160B24209F2D7700A4E30B /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F160B23209F2D7700A4E30B /* Network.swift */; };
 		5F160B27209F3AAF00A4E30B /* JokesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F160B26209F3AAF00A4E30B /* JokesListViewController.swift */; };
 		5F160B29209F3BBC00A4E30B /* JokeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F160B28209F3BBC00A4E30B /* JokeTableViewCell.swift */; };
+		5F160B2B209F44CB00A4E30B /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F160B2A209F44CB00A4E30B /* APIError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		5F160B23209F2D7700A4E30B /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		5F160B26209F3AAF00A4E30B /* JokesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokesListViewController.swift; sourceTree = "<group>"; };
 		5F160B28209F3BBC00A4E30B /* JokeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeTableViewCell.swift; sourceTree = "<group>"; };
+		5F160B2A209F44CB00A4E30B /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				5F160B23209F2D7700A4E30B /* Network.swift */,
+				5F160B2A209F44CB00A4E30B /* APIError.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				5F160B16209F226F00A4E30B /* JokesListViewControllerPresenter.swift in Sources */,
 				5F160B14209F223B00A4E30B /* JokesListViewControllerInteractor.swift in Sources */,
 				5F160B24209F2D7700A4E30B /* Network.swift in Sources */,
+				5F160B2B209F44CB00A4E30B /* APIError.swift in Sources */,
 				5F160B1A209F269500A4E30B /* JokesListViewControllerWireframe.swift in Sources */,
 				5F160AF1209F21B300A4E30B /* AppDelegate.swift in Sources */,
 				5F160B22209F2D1700A4E30B /* JokesModel.swift in Sources */,
