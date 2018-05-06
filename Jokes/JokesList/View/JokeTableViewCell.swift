@@ -10,5 +10,6 @@ import UIKit
 
 class JokeTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var jokeLabel: UILabel!
     
 }

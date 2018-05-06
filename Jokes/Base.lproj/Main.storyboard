@@ -70,6 +70,9 @@
                                                 <constraint firstAttribute="trailing" secondItem="dtp-Nl-TeZ" secondAttribute="trailing" constant="15" id="dpY-Ov-cON"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="jokeLabel" destination="dtp-Nl-TeZ" id="wnh-MY-dhG"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
