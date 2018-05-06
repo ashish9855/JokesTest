@@ -45,12 +45,20 @@
                                     <constraint firstItem="eLV-cJ-ubT" firstAttribute="top" secondItem="X0e-hc-wCA" secondAttribute="bottom" constant="10" id="h7O-Yg-xuJ"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q1h-4V-qt0">
+                                <rect key="frame" x="0.0" y="110" width="375" height="557"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="q1h-4V-qt0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2qB-JJ-Nip"/>
                             <constraint firstItem="VwL-OL-HlD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2xY-FV-naI"/>
+                            <constraint firstItem="q1h-4V-qt0" firstAttribute="top" secondItem="VwL-OL-HlD" secondAttribute="bottom" id="L5E-k3-Ac2"/>
                             <constraint firstItem="VwL-OL-HlD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UAv-6i-ydF"/>
                             <constraint firstItem="VwL-OL-HlD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ywe-De-7U6"/>
+                            <constraint firstItem="q1h-4V-qt0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hEp-8j-njQ"/>
+                            <constraint firstAttribute="bottom" secondItem="q1h-4V-qt0" secondAttribute="bottom" id="lpz-2A-nRU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
