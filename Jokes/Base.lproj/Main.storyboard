@@ -34,7 +34,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="eLV-cJ-ubT" firstAttribute="leading" secondItem="VwL-OL-HlD" secondAttribute="leading" constant="10" id="2QQ-S3-S0c"/>
                                     <constraint firstAttribute="trailing" secondItem="eLV-cJ-ubT" secondAttribute="trailing" constant="10" id="66c-jG-IL8"/>
@@ -50,7 +50,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="q1h-4V-qt0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2qB-JJ-Nip"/>
                             <constraint firstItem="VwL-OL-HlD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2xY-FV-naI"/>
