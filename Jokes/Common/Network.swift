@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+protocol NetworkProtocols: class {
+    func onSuccess(_ data: [Joke])
+    func onError(_ error: APIError)
+}
+
