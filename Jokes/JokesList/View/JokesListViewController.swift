@@ -27,7 +27,12 @@ class JokesListViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    private func showAlert(with message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertControllerStyle.alert)
+        let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
 }
 
 extension JokesListViewController: UITableViewDataSource {
