@@ -9,7 +9,7 @@
 import Foundation
 
 protocol NetworkProtocols: class {
-    func onSuccess(_ data: AnyObject)
+    func onSuccess(_ data: Data)
     func onError(_ error: APIError)
 }
 
@@ -38,12 +38,7 @@ class Network {
             }
             else {
                 if let data = data {
-                    guard let json = try? JSONSerialization.jsonObject(with: data, options: []) else {
-                        let apiError = APIError.ServerError(message: "Some error occured")
-                        self?.delegate?.onError(apiError)
-                        return
-                    }
-                    self?.delegate?.onSuccess(json as AnyObject)
+                    self?.delegate?.onSuccess(data)
                 }
             }
         }
