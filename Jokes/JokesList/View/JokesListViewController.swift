@@ -76,3 +76,10 @@ extension JokesListViewController: JokesListViewControllerProtocol {
         tableView.reloadData()
     }
 }
+
+extension JokesListViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return true
+    }
+}
