@@ -19,8 +19,7 @@ class JokesListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        presenter?.didLoad()
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,6 +35,15 @@ class JokesListViewController: UIViewController {
     }
     
     @IBAction func doneButton(_ sender: Any) {
+        guard let firstName = self.firstNameField.text else {
+            showAlert(with: "PLease enter first name")
+            return
+        }
+        guard let lastName = self.lastNameField.text else {
+            showAlert(with: "PLease enter last name")
+            return
+        }
+        presenter?.reloadData(with: firstName, and: lastName)
     }
 }
 
@@ -66,5 +74,12 @@ extension JokesListViewController: JokesListViewControllerProtocol {
     
     func showJokes() {
         tableView.reloadData()
+    }
+}
+
+extension JokesListViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return true
     }
 }

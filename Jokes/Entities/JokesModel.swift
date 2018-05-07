@@ -10,18 +10,19 @@ import Foundation
 
 struct JokesResponse: Codable {
     
-    let type: String
+    let type: String?
     let jokes: [Joke]
     enum CodingKeys: String, CodingKey {
-        case jokes = "values"
+        case jokes = "value"
         case type = "type"
     }
 }
 
 struct Joke: Codable {
     
-    let id: String
-    let title: String
+    let id: Int
+    var title: String
+    
     enum CodingKeys: String, CodingKey {
         case title = "joke"
         case id = "id"

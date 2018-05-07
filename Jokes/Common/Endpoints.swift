@@ -9,7 +9,7 @@
 import Foundation
 
 struct API {
-    static let baseUrl = "http://api.icndb.com"
+    static let baseUrl = "https://api.icndb.com"
 }
 
 protocol Endpoint {
