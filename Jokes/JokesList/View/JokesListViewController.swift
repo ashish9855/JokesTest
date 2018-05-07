@@ -80,6 +80,7 @@ extension JokesListViewController: JokesListViewControllerProtocol {
 extension JokesListViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
         return true
     }
 }
