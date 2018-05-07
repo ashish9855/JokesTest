@@ -21,5 +21,9 @@ struct JokesResponse: Codable {
 struct Joke: Codable {
     
     let id: String
-    let joke: String
+    let title: String
+    enum CodingKeys: String, CodingKey {
+        case title = "joke"
+        case id = "id"
+    }
 }
