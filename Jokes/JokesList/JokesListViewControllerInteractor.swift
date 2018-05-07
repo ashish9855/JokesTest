@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+class JokesListViewControllerInteractor: JokesListViewControllerInteractorInputProtocol {
+    
+    var presenter: JokesListViewControllerInteractorOutputProtocol?
+    var network: Network?
+    
+    func retrieveJokes() {
+        
+    }
+}
