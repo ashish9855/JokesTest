@@ -28,7 +28,7 @@ protocol JokesListViewControllerPresenterProtocol: class {
     var view: JokesListViewControllerProtocol? { get set }
     var wireFrame: JokesListViewControllerWireFrameProtocol? { get set }
     var interactor: JokesListViewControllerInteractorInputProtocol? { get set }
-    var jokes:[Joke] {get set}
+    var changedJokes:[Joke] {get set}
     
     // VIEW -> PRESENTER
     func didLoad()

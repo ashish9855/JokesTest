@@ -48,7 +48,7 @@ extension JokesListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if let rows = presenter?.jokes.count {
+        if let rows = presenter?.changedJokes.count {
             return rows
         }
         return 0
@@ -57,7 +57,7 @@ extension JokesListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIndetifier, for: indexPath) as! JokeTableViewCell
-        let joke = presenter?.jokes[indexPath.item]
+        let joke = presenter?.changedJokes[indexPath.item]
         cell.set(joke: joke)
         return cell
     }
