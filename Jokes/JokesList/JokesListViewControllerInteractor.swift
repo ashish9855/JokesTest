@@ -14,7 +14,11 @@ class JokesListViewControllerInteractor: JokesListViewControllerInteractorInputP
     var network: Network?
     
     func retrieveJokes(url: String, count: Int) {
-        
+        let newUrl = url + "/" + String(count)
+        guard let url = URL(string: newUrl) else {
+            return
+        }
+        network?.makeRequest(with: url, method: .GET, parameters: nil)
     }
 }
 
