@@ -11,6 +11,7 @@ import UIKit
 class JokesListViewController: UIViewController {
 
     let cellIndetifier = "JokeTableViewCell"
+    var presenter: JokesListViewControllerPresenterProtocol?
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var lastNameField: UITextField!
@@ -45,5 +46,16 @@ extension JokesListViewController: UITableViewDataSource {
        
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIndetifier, for: indexPath)
         return cell
+    }
+}
+
+extension JokesListViewController: JokesListViewControllerProtocol {
+    
+    func showError(with message: String) {
+        showAlert(with: message)
+    }
+    
+    func showJokes() {
+        tableView.reloadData()
     }
 }
