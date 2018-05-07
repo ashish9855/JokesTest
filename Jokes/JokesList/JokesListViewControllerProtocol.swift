@@ -43,7 +43,6 @@ protocol JokesListViewControllerProtocol: class {
     var presenter: JokesListViewControllerPresenterProtocol? { get set }
     
     // PRESENTER -> VIEW
+    func showError(with message: String)
     func showJokes()
-    func showLoading()
-    func hideLoading()
 }
