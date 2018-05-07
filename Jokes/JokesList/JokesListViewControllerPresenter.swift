@@ -14,13 +14,17 @@ class JokesListViewControllerPresenter: JokesListViewControllerPresenterProtocol
     var wireFrame: JokesListViewControllerWireFrameProtocol?
     var interactor: JokesListViewControllerInteractorInputProtocol?
     var jokes: [Joke] = []
-    
+    private var firstName = "Chuck"
+    private var lastName = "Norris"
+
     func didLoad() {
         interactor?.retrieveJokes(url: Endpoints.randomJokes.fetch.url, count: 10)
     }
     
     func reloadData(with firstName: String, and lastName: String) {
         replaceJokes(with: firstName, and: lastName)
+        self.firstName = firstName
+        self.lastName = lastName
         view?.showJokes()
     }
     
@@ -28,8 +32,8 @@ class JokesListViewControllerPresenter: JokesListViewControllerPresenterProtocol
         
         jokes = jokes.map { (joke) -> Joke in
             var newJoke = joke
-            newJoke.title = joke.title.replacingOccurrences(of: "Chuck", with: firstName)
-            newJoke.title = joke.title.replacingOccurrences(of: "Norris", with: lastName)
+            newJoke.title = joke.title.replacingOccurrences(of: self.firstName, with: firstName)
+            newJoke.title = newJoke.title.replacingOccurrences(of: self.lastName, with: lastName)
             return newJoke
         }
     }
