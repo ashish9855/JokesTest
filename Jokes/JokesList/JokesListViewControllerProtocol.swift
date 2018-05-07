@@ -32,6 +32,7 @@ protocol JokesListViewControllerPresenterProtocol: class {
     
     // VIEW -> PRESENTER
     func didLoad()
+    func reloadData(with firstName: String, and lastName: String)
 }
 
 protocol JokesListViewControllerWireFrameProtocol: class {
