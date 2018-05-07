@@ -13,6 +13,6 @@ class JokeTableViewCell: UITableViewCell {
     @IBOutlet weak var jokeLabel: UILabel!
     
     func set(joke:Joke) {
-        jokeLabel.text = joke.joke
+        jokeLabel.text = joke.title
     }
 }
