@@ -34,6 +34,9 @@ class JokesListViewController: UIViewController {
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
     }
+    
+    @IBAction func doneButton(_ sender: Any) {
+    }
 }
 
 extension JokesListViewController: UITableViewDataSource {
