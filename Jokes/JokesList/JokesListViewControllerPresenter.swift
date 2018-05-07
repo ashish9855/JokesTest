@@ -16,7 +16,7 @@ class JokesListViewControllerPresenter: JokesListViewControllerPresenterProtocol
     var jokes: [Joke] = []
     
     func didLoad() {
-        
+        interactor?.retrieveJokes(with: Endpoints.randomJokes.fetch.url, count: 10)
     }
 }
 

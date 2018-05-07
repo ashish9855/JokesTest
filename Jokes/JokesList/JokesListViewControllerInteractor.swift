@@ -13,7 +13,7 @@ class JokesListViewControllerInteractor: JokesListViewControllerInteractorInputP
     weak var presenter: JokesListViewControllerInteractorOutputProtocol?
     var network: Network?
     
-    func retrieveJokes() {
+    func retrieveJokes(with: String, count: Int) {
         
     }
 }
