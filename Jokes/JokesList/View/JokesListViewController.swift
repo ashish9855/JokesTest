@@ -35,12 +35,9 @@ class JokesListViewController: UIViewController {
     }
     
     @IBAction func doneButton(_ sender: Any) {
-        guard let firstName = self.firstNameField.text else {
-            showAlert(with: "PLease enter first name")
-            return
-        }
-        guard let lastName = self.lastNameField.text else {
-            showAlert(with: "PLease enter last name")
+       
+        guard let firstName = firstNameField.text, !firstName.isEmpty, let lastName = lastNameField.text, !lastName.isEmpty else {
+            showAlert(with: "First or Last name field cannot be blank")
             return
         }
         presenter?.reloadData(with: firstName, and: lastName)
