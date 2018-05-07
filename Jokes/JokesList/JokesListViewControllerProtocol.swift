@@ -13,7 +13,7 @@ protocol JokesListViewControllerInteractorInputProtocol: class {
     
     var presenter: JokesListViewControllerInteractorOutputProtocol? { get set }
     var network: Network? { get set }
-    func retrieveJokes(with: String, count: Int)
+    func retrieveJokes(url: String, count: Int)
 }
 
 protocol JokesListViewControllerInteractorOutputProtocol: class {
