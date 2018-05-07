@@ -23,10 +23,10 @@ class JokesListViewControllerPresenter: JokesListViewControllerPresenterProtocol
 extension JokesListViewControllerPresenter:JokesListViewControllerInteractorOutputProtocol {
     
     func didRetrieve(jokes: [Joke]) {
-        
+        self.jokes = jokes
     }
     
-    func onError(with: APIError) {
-        
+    func onError(message: APIError) {
+        view?.showError(with: message.description)
     }
 }
