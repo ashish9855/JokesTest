@@ -18,6 +18,21 @@ class JokesListViewControllerPresenter: JokesListViewControllerPresenterProtocol
     func didLoad() {
         interactor?.retrieveJokes(url: Endpoints.randomJokes.fetch.url, count: 10)
     }
+    
+    func reloadData(with firstName: String, and lastName: String) {
+        replaceJokes(with: firstName, and: lastName)
+        view?.showJokes()
+    }
+    
+    private func replaceJokes(with firstName: String, and lastName: String) {
+        
+        jokes = jokes.map { (joke) -> Joke in
+            var newJoke = joke
+            newJoke.title = joke.title.replacingOccurrences(of: "Chuck", with: firstName)
+            newJoke.title = joke.title.replacingOccurrences(of: "Norris", with: lastName)
+            return newJoke
+        }
+    }
 }
 
 extension JokesListViewControllerPresenter:JokesListViewControllerInteractorOutputProtocol {
