@@ -17,3 +17,15 @@ class JokesListViewControllerInteractor: JokesListViewControllerInteractorInputP
         
     }
 }
+
+
+extension JokesListViewControllerInteractor: NetworkProtocols {
+    
+    func onSuccess(_ data: AnyObject) {
+        
+    }
+    
+    func onError(_ error: APIError) {
+        
+    }
+}
