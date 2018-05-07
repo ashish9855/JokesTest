@@ -39,12 +39,18 @@ class JokesListViewController: UIViewController {
 extension JokesListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if let rows = presenter?.jokes.count {
+            return rows
+        }
         return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIndetifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIndetifier, for: indexPath) as! JokeTableViewCell
+        let joke = presenter?.jokes[indexPath.item]
+        cell.set(joke: joke)
         return cell
     }
 }
