@@ -13,9 +13,10 @@ class JokesListViewControllerPresenter: JokesListViewControllerPresenterProtocol
     weak var view: JokesListViewControllerProtocol?
     var wireFrame: JokesListViewControllerWireFrameProtocol?
     var interactor: JokesListViewControllerInteractorInputProtocol?
-    var jokes: [Joke] = []
-    private var firstName = "Chuck"
-    private var lastName = "Norris"
+    private var originalJokes: [Joke] = []
+    var changedJokes: [Joke] = []
+    private let firstName = "Chuck"
+    private let lastName = "Norris"
 
     func didLoad() {
         interactor?.retrieveJokes(url: Endpoints.randomJokes.fetch.url, count: 10)
@@ -23,14 +24,12 @@ class JokesListViewControllerPresenter: JokesListViewControllerPresenterProtocol
     
     func reloadData(with firstName: String, and lastName: String) {
         replaceJokes(with: firstName, and: lastName)
-        self.firstName = firstName
-        self.lastName = lastName
         view?.showJokes()
     }
     
     private func replaceJokes(with firstName: String, and lastName: String) {
         
-        jokes = jokes.map { (joke) -> Joke in
+        changedJokes = originalJokes.map { (joke) -> Joke in
             var newJoke = joke
             newJoke.title = joke.title.replacingOccurrences(of: self.firstName, with: firstName)
             newJoke.title = newJoke.title.replacingOccurrences(of: self.lastName, with: lastName)
@@ -42,7 +41,7 @@ class JokesListViewControllerPresenter: JokesListViewControllerPresenterProtocol
 extension JokesListViewControllerPresenter:JokesListViewControllerInteractorOutputProtocol {
     
     func didRetrieve(jokes: [Joke]) {
-        self.jokes = jokes
+        self.originalJokes = jokes
     }
     
     func onError(with message: APIError) {

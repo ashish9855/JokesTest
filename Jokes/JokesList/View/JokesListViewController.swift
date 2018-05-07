@@ -35,12 +35,9 @@ class JokesListViewController: UIViewController {
     }
     
     @IBAction func doneButton(_ sender: Any) {
-        guard let firstName = self.firstNameField.text else {
-            showAlert(with: "PLease enter first name")
-            return
-        }
-        guard let lastName = self.lastNameField.text else {
-            showAlert(with: "PLease enter last name")
+       
+        guard let firstName = firstNameField.text, !firstName.isEmpty, let lastName = lastNameField.text, !lastName.isEmpty else {
+            showAlert(with: "First or Last name field cannot be blank")
             return
         }
         presenter?.reloadData(with: firstName, and: lastName)
@@ -51,7 +48,7 @@ extension JokesListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if let rows = presenter?.jokes.count {
+        if let rows = presenter?.changedJokes.count {
             return rows
         }
         return 0
@@ -60,7 +57,7 @@ extension JokesListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIndetifier, for: indexPath) as! JokeTableViewCell
-        let joke = presenter?.jokes[indexPath.item]
+        let joke = presenter?.changedJokes[indexPath.item]
         cell.set(joke: joke)
         return cell
     }
