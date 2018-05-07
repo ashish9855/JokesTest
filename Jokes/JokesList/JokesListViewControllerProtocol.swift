@@ -20,7 +20,7 @@ protocol JokesListViewControllerInteractorOutputProtocol: class {
     
     // INTERACTOR -> PRESENTER
     func didRetrieve(jokes: [Joke])
-    func onError(with: APIError)
+    func onError(with message: APIError)
 }
 
 protocol JokesListViewControllerPresenterProtocol: class {

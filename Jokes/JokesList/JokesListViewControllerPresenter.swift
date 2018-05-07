@@ -26,7 +26,7 @@ extension JokesListViewControllerPresenter:JokesListViewControllerInteractorOutp
         self.jokes = jokes
     }
     
-    func onError(message: APIError) {
+    func onError(with message: APIError) {
         view?.showError(with: message.description)
     }
 }
