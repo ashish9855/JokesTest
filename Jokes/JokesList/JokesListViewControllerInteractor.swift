@@ -27,9 +27,21 @@ extension JokesListViewControllerInteractor: NetworkProtocols {
     
     func onSuccess(_ data: AnyObject) {
         
+        let jsonDecoder = JSONDecoder()
+        guard let data = data as? Data else {
+            return
+        }
+        if let response = try? jsonDecoder.decode(JokesResponse.self,
+                                                 from: data) {
+            self.presenter?.didRetrieve(jokes: response.jokes)
+        }
+        else {
+            let error = APIError.ServerError(message: "Some error occured")
+            self.presenter?.onError(with: error)
+        }
     }
     
     func onError(_ error: APIError) {
-        
+        self.presenter?.onError(with: error)
     }
 }
